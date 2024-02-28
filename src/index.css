@@ -1,13 +1,41 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.GraphandAd {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 columns */
+  grid-column-gap: 20px; /* Gap between columns */
+  padding: 30px;
+  background: #ececec;
+}
+
+.Graph {
+  grid-column: span 8; /* Occupies 8 columns */
+  height:300px;
+}
+
+.AdSection {
+  grid-column: span 4; /* Occupies 4 columns */
+    
+}
+/* Media query for small screens */
+@media screen and (max-width: 600px) {
+  .Graph,
+  .AdSection {
+    grid-column: span 12; /* Both children occupy full 12 columns */
+  }
+  .GraphandAd {
+    grid-column-gap: 0; /* No gap for small screens */
+  }
 }
