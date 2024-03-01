@@ -1,4 +1,3 @@
-// TradingView.jsx
 import React, { useEffect, useRef, memo } from 'react';
 
 function TradingView() {
@@ -13,15 +12,18 @@ function TradingView() {
       script.innerHTML = `
         {
           "autosize": true,
-          "symbol": "NASDAQ:AAPL",
+          "symbol": "CRYPTOCAP:BTC",
           "interval": "D",
           "timezone": "Etc/UTC",
           "theme": "light",
-          "style": "1",
+          "style": "2",
           "locale": "en",
           "enable_publishing": false,
-          "allow_symbol_change": true,
+          "hide_top_toolbar": true,
+          "save_image": false,
+          "details": true,
           "calendar": false,
+          "hide_volume": true,
           "support_host": "https://www.tradingview.com"
         }`;
       container.current.appendChild(script);
@@ -37,4 +39,4 @@ function TradingView() {
   );
 }
 
-export default memo(TradingView);
+export default (TradingView);
