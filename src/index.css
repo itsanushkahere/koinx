@@ -1,9 +1,15 @@
 ::-webkit-scrollbar {
   height: 0;
+  width: 0;
+}
+
+*{
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -20,13 +26,13 @@ code {
   display: grid;
   grid-template-columns: repeat(12, 1fr); /* 12 columns */
   grid-column-gap: 20px; /* Gap between columns */
-  padding: 30px;
-  background: #ececec;
+  margin-top: 10px;
 }
 
 .Graph {
   grid-column: span 8; /* Occupies 8 columns */
   height:900px;
+  margin-bottom: 20px;
 }
 
 .AdSection {
@@ -42,4 +48,35 @@ code {
   .GraphandAd {
     grid-column-gap: 0; /* No gap for small screens */
   }
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  cursor: pointer;
+  height: 20px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: -150px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 8px 0;
+}
+
+.dropdown-item {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
 }
